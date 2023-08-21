@@ -10,8 +10,13 @@ void insertionSort();
 int main(void){
 
 	int input;
-	cout << "Input 6 Numbers : ";
-	cin >> input;
+
+	while(1){
+		cout << "Input 6 Numbers : ";
+		cin >> input;
+
+		if(input > 100000 && input < 999999) break;
+	}
 
 	numArr = splitInputNum(input);
 	insertionSort();

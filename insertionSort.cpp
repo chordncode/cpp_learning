@@ -22,6 +22,7 @@ int main(void){
 	insertionSort();
 
 	for(int i(0); i < 6; i++){
+		if(i > 0) cout << ", ";
 		cout << numArr[i];
 	}
 	cout << endl;
@@ -41,5 +42,19 @@ int* splitInputNum(int input){
 }
 
 void insertionSort(){
+
+	for(int i(1); i < 6; i++){
+		int pick = numArr[i];	
+		for(int j(i); j > 0; j--){
+			if(numArr[j] < numArr[j-1]){
+				int temp = numArr[j];
+				numArr[j] = numArr[j - 1];
+				numArr[j - 1] = temp;
+			} else {
+				numArr[j] = pick;
+				break;
+			}
+		}
+	}
 
 }

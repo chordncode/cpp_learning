@@ -134,9 +134,11 @@ int main(){
     list.add(30);
     cout << "Print List 1 : " << endl;
     printList(list);
+
     list.remove(0);
     cout << "Print List 2 : " << endl;
     printList(list);
+    
     list.remove(1);
     cout << "Print List 3 : " << endl;
     printList(list);
